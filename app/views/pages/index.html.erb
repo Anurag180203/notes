@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Pages</h1>
+
+<div id="pages" >
+  <% @pages.each do |page| %>
+    
+<div class="card" style="width: 18rem;">
+<div class="card-body">
+  <h5 class="card-title"><%= page.title %></h5>
+  <p class="card-text"><%= page.content %></p>
+  <%= link_to "Show this page", page ,class:"card-link" %>
+  <%= button_to "Destroy this page", page, method: :delete ,class:"card-link" %>
+</div>
+</div>
+  <% end %>
+</div>
+
+<%= link_to "New page", new_page_path %>
